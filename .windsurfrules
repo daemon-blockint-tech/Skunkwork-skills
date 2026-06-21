@@ -1,0 +1,44 @@
+# SKILL-AGENT Project — Custom Skills
+
+This project contains 34 skill definitions for AI agent systems. Skills live in subdirectories under this root, each with SKILL.md + optional refs/assets/scripts.
+
+## Skill Directory Index
+
+| Skill | Trigger |
+|-------|---------|
+| action-invoker-operator | Deterministic tool execution, Action Types |
+| aip-agent-builder-prompt-engineer | AIP agent config, Ontology of Thought |
+| aip-engineer | AIP platform engineering |
+| application-builder-workshop-slate | Workshop/slate apps |
+| autonomous-operations-optimization | Enterprise ops AI agents |
+| business-foundation | Strategy, product, sales, scaling |
+| business-planning | Roadmaps, KPIs, budgets |
+| business-revenue-forecasting | Revenue models & forecasting |
+| cash-flow-management | Cash flow & asset planning |
+| data-steward-information-security-officer | Data Markings, RLS, OLS |
+| employee-management | Performance & accountability |
+| financial-report-analysis | P&L, balance sheet, cash flow |
+| forward-deployed-engineer | Customer-embedded delivery, FDE playbooks |
+| forward-deployed-software-engineer | Field engineering |
+| function-tool-developer | Deterministic TS/Py/Rust functions |
+| human-capital-and-smart-interviewing | Interview & hiring techniques |
+| iso-9001-quality-management | QMS |
+| iso-14001-environmental-management | EMS |
+| iso-27001-information-security | ISMS |
+| iso-iec-20000-it-service-management | ITSMS |
+| iso-iec-42001-artificial-intelligence | AIMS |
+| meta-skill | Skill creation, validation, orchestration |
+| ontology-administrator | Schema governance, Object/Link/Action Types |
+| ontology-architect | Enterprise ontology strategy |
+| ontology-augmented-generation | OAG, OG-RAG, ontology-grounded LLM |
+| ontology-developer | OWL/RDF/SHACL/SPARQL implementation |
+| ontology-editor | Ontology editing |
+| rpa-bridges-for-legacy-systems | RPA patterns for legacy integration |
+| skunkworks-agent-coder | Rapid agent dev, 80/20 delivery |
+| skunkworks-organizational-model | Skunk Works team structure |
+| uav-uas-aerodynamic-designer | UAV/UAS design |
+| vanguard-audit | K8s CVE audit, security compliance |
+| viewer-read-only-user | Read-only viewer |
+| working-capital-management | Crisis survival strategies |
+
+Load relevant SKILL.md when task matches. Skills compose naturally.

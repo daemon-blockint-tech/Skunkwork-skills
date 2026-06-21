@@ -1,0 +1,70 @@
+{
+  "name": "E-Commerce Domain Ontology",
+  "classes": [
+    {
+      "name": "Product",
+      "properties": [
+        "sku (string, unique identifier)",
+        "name (string)",
+        "price (decimal, must be > 0)",
+        "category (enum: electronics, clothing, books, home)",
+        "inStock (boolean)"
+      ]
+    },
+    {
+      "name": "Customer",
+      "properties": [
+        "customerId (string, unique)",
+        "name (string)",
+        "email (string)",
+        "tier (enum: bronze, silver, gold, platinum)"
+      ]
+    },
+    {
+      "name": "Order",
+      "properties": [
+        "orderId (string, unique)",
+        "orderDate (date)",
+        "status (enum: pending, processing, shipped, delivered, cancelled, refunded)",
+        "totalAmount (decimal)"
+      ]
+    },
+    {
+      "name": "OrderItem",
+      "properties": [
+        "quantity (integer, >= 1)",
+        "unitPrice (decimal)"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "name": "places",
+      "domain": "Customer",
+      "range": "Order",
+      "cardinality": "1:*"
+    },
+    {
+      "name": "contains",
+      "domain": "Order",
+      "range": "OrderItem",
+      "cardinality": "1:*"
+    },
+    {
+      "name": "refersToProduct",
+      "domain": "OrderItem",
+      "range": "Product",
+      "cardinality": "exactly 1"
+    }
+  ],
+  "constraints": [
+    "Order.totalAmount must equal the sum over all its OrderItems of (quantity * unitPrice)",
+    "Only Products where inStock=true may appear in new Orders",
+    "Order.status must be one of the allowed enumerated values",
+    "Every OrderItem must refer to exactly one Product"
+  ],
+  "examples": [
+    "Customer CUST-1001 (gold tier) placed Order ORD-98765 which contains 3x Product SKU-42 (Wireless Headphones Pro, price 129.99) and currently has status=shipped",
+    "Product SKU-17 belongs to category=clothing and is currently inStock=false"
+  ]
+}
